@@ -12,6 +12,8 @@
   <content_rating type="oars-1.1"/>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://pgAdmin.org/</url>
+  <url type="faq">https://www.pgadmin.org/faq</url>
+  <url type="vcs-browser">https://github.com/pgadmin-org/pgadmin4</url>
   <screenshots>
     <screenshot type="default">
       <caption>Welcome screen, standard theme</caption>
