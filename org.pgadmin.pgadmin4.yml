@@ -64,6 +64,7 @@ modules:
         x-checker-data:
           type: pypi
           name: bcrypt
+          packagetype: bdist_wheel
 
   - name: python3-pycparser
     buildsystem: simple
@@ -90,6 +91,7 @@ modules:
         x-checker-data:
           type: pypi
           name: cffi
+          packagetype: bdist_wheel
 
   - name: python3-cryptography
     buildsystem: simple
@@ -105,6 +107,7 @@ modules:
         x-checker-data:
           type: pypi
           name: cryptography
+          packagetype: bdist_wheel
 
   - python3-requirements_filtered.yaml
 
