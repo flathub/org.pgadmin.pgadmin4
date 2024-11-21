@@ -3,10 +3,23 @@
   <id>org.pgadmin.pgadmin4</id>
   <name>pgAdmin 4</name>
   <project_license>PostgreSQL</project_license>
-  <developer_name>The pgAdmin Development Team</developer_name>
-  <summary>Administration and development platform for PostgreSQL</summary>
+  <developer_name>pgAdmin Development Team</developer_name>
+  <summary>Admin and development platform for PostgreSQL</summary>
    <description>
     <p>pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world. </p>
+
+    <ul>
+      <li>Multiplatform Support: Available on Windows, macOS, and Linux, with a web-based interface for remote access.</li>
+      <li>Advanced Query Tool: Supports syntax highlighting, code completion, and error indicators for writing and executing SQL queries.</li>
+      <li>Database Management: Tools for creating, modifying, and deleting databases, tables, and other objects, plus data export/import capabilities.</li>
+      <li>Schema Design: ERD Tool for designing and documenting schemas.</li>
+      <li>Routine Maintenance: Auto-vacuum management, backup, restore, and vacuum on demand.</li>
+      <li>Monitoring Dashboard: Tools for monitoring database performance and health.</li>
+      <li>User Management: Detailed permissions and access controls for secure database access.</li>
+      <li>Regular Updates and Community Support: Benefit from regular updates, comprehensive documentation, and community forums for support.</li>
+    </ul>
+
+    <p>pgAdmin 4 simplifies PostgreSQL database management, making it accessible and efficient for developers, database administrators, and data analysts alike.</p>
   </description>
   <launchable type="desktop-id">org.pgadmin.pgadmin4.desktop</launchable>
   <content_rating type="oars-1.1"/>
@@ -14,6 +27,8 @@
   <url type="homepage">https://pgAdmin.org/</url>
   <url type="faq">https://www.pgadmin.org/faq</url>
   <url type="vcs-browser">https://github.com/pgadmin-org/pgadmin4</url>
+  <url type="bugtracker">https://github.com/pgadmin-org/pgadmin4/issues</url>
+  <url type="help">https://www.pgadmin.org/docs/pgadmin4/latest/index.html</url>
   <screenshots>
     <screenshot type="default">
       <caption>Welcome screen, standard theme</caption>
@@ -25,7 +40,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="8.13.0" date="2024-11-14"/>
-    <release version="8.12.0" date="2024-09-23"/>
+    <release version="8.13.0" date="2024-11-14"><url>https://www.pgadmin.org/docs/pgadmin4/8.13/release_notes_8_13.html</url></release>
+    <release version="8.12.0" date="2024-09-23"><url>https://www.pgadmin.org/docs/pgadmin4/8.12/release_notes_8_12.html</url></release>
   </releases>
 </component>
