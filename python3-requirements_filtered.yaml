@@ -8,7 +8,8 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "greenlet" --no-build-isolation
     sources:
-      - type: file
+      - &id008
+        type: file
         url: https://files.pythonhosted.org/packages/2f/ff/df5fede753cc10f6a5be0931204ea30c35fa2f2ea7a35b25bdaf4fe40e46/greenlet-3.1.1.tar.gz
         sha256: 4ce3ac6cdb6adf7946475d7ef31777c26d94bccc377e070a7986bd2d5c515467
   - name: python3-tomli
@@ -24,7 +25,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "Flask==3.0.*" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "Flask==3.1.*" --no-build-isolation
     sources:
       - &id001
         type: file
@@ -40,8 +41,8 @@ modules:
         sha256: ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28
       - &id004
         type: file
-        url: https://files.pythonhosted.org/packages/61/80/ffe1da13ad9300f87c93af113edd0638c75138c42a0994becfacac078c06/flask-3.0.3-py3-none-any.whl
-        sha256: 34e815dfaa43340d1d15a5c3a02b8476004037eb4840b34910c6e21679d288f3
+        url: https://files.pythonhosted.org/packages/af/47/93213ee66ef8fae3b93b3e29206f6b251e65c97bd91d8e1c5596ef15af0a/flask-3.1.0-py3-none-any.whl
+        sha256: d667207822eb83f1c4b50949b1623c8fc8d51f2341d65f72e1a1815397551136
       - &id005
         type: file
         url: https://files.pythonhosted.org/packages/04/96/92447566d16df59b2a776c0fb82dbc4d9e07cd95062562af01e408583fc4/itsdangerous-2.2.0-py3-none-any.whl
@@ -60,7 +61,7 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "Flask-Login==0.*" --no-build-isolation
     sources:
-      - &id011
+      - &id012
         type: file
         url: https://files.pythonhosted.org/packages/59/f5/67e9cc5c2036f58115f9fe0f00d203cf6780c3ff8ae0e705e7a9d9e8ff9e/Flask_Login-0.6.3-py3-none-any.whl
         sha256: 849b25b82a436bf830a054e74214074af59097171562ab10bfa999e6b78aae5d
@@ -97,7 +98,7 @@ modules:
         url: https://files.pythonhosted.org/packages/93/01/587023575286236f95d2ab8a826c320375ed5ea2102bb103ed89704ffa6b/Flask_Migrate-4.0.7-py3-none-any.whl
         sha256: 5c532be17e7b43a223b7500d620edae33795df27c75811ddf32560f7d48ec617
       - *id001
-      - &id008
+      - &id009
         type: file
         url: https://files.pythonhosted.org/packages/50/65/9cbc9c4c3287bed2499e05033e207473504dc4df999ce49385fb1f8b058a/sqlalchemy-2.0.36.tar.gz
         sha256: 7f2767680b6d2398aea7082e45a774b2b0767b5c8d8ffb9c8b683088ea9b29c5
@@ -107,13 +108,14 @@ modules:
       - *id002
       - *id003
       - *id004
-      - &id009
+      - &id010
         type: file
         url: https://files.pythonhosted.org/packages/1d/6a/89963a5c6ecf166e8be29e0d1bf6806051ee8fe6c82e232842e3aeac9204/flask_sqlalchemy-3.1.1-py3-none-any.whl
         sha256: 4ba4be7f419dc72f4efd8802d69974803c37259dd42f3913b0dcf75c9447e0a0
+      - *id008
       - *id005
       - *id006
-      - &id010
+      - &id011
         type: file
         url: https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl
         sha256: 04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d
@@ -125,14 +127,15 @@ modules:
         --prefix=${FLATPAK_DEST} "Flask-SQLAlchemy==3.1.*" --no-build-isolation
     sources:
       - *id001
-      - *id008
+      - *id009
       - *id002
       - *id003
       - *id004
-      - *id009
+      - *id010
+      - *id008
       - *id005
       - *id006
-      - *id010
+      - *id011
       - *id007
   - name: python3-Flask-WTF
     buildsystem: simple
@@ -144,14 +147,14 @@ modules:
       - *id002
       - *id003
       - *id004
-      - &id012
+      - &id013
         type: file
         url: https://files.pythonhosted.org/packages/dc/19/354449145fbebb65e7c621235b6ad69bebcfaec2142481f044d0ddc5b5c5/flask_wtf-1.2.2-py3-none-any.whl
         sha256: e93160c5c5b6b571cf99300b6e01b72f9a101027cab1579901f8b10c5daf0b70
       - *id005
       - *id006
       - *id007
-      - &id013
+      - &id014
         type: file
         url: https://files.pythonhosted.org/packages/08/c9/2088fb5645cd289c99ebe0d4cdcc723922a1d8e1beaefb0f6f76dff9b21c/wtforms-3.2.1-py3-none-any.whl
         sha256: 583bad77ba1dd7286463f21e11aa3043ca4869d03575921d1a1698d0715e0fd4
@@ -211,7 +214,7 @@ modules:
         sha256: 638194cf91f8b301380f36d70e2034c77ee25b98cb5d80a1626820df9a6d4625
       - *id005
       - *id006
-      - &id015
+      - &id016
         type: file
         url: https://files.pythonhosted.org/packages/11/c3/005fcca25ce078d2cc29fd559379817424e94885510568bc1bc53d7d5846/pytz-2024.2-py2.py3-none-any.whl
         sha256: 31c7c1817eb7fae7ca4b8c7ee50c72f93aa2dd863de768e1ef4245d426aa0725
@@ -225,7 +228,7 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/14/c7/2531aca6ab7baa3774fde2dfc9c9dd6d5a42576a1013a93701bfdc402fdd/Flask-Principal-0.4.0.tar.gz
         sha256: f5d6134b5caebfdbb86f32d56d18ee44b080876a27269560a96ea35f75c99453
-      - *id011
+      - *id012
       - *id001
       - *id002
       - *id003
@@ -239,8 +242,8 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/3e/2e/dad90f29b168602dd610c1b8568a1059ede59b4468aa8baf92fff0151e74/flask_security_too-5.5.2-py3-none-any.whl
         sha256: 393fb9b5c03ebc14f8c3500af4691c881ba34599a74ccbc8a2b2dc4f51071585
-      - *id012
-      - &id021
+      - *id013
+      - &id022
         type: file
         url: https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl
         sha256: 946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3
@@ -249,12 +252,12 @@ modules:
         sha256: ac29d5f956f01d5e4bb63102a5a19957f1b9175e45649977264a1416783bb717
       - *id005
       - *id006
-      - &id014
+      - &id015
         type: file
         url: https://files.pythonhosted.org/packages/3b/a4/ab6b7589382ca3df236e03faa71deac88cae040af60c071a78d254a62172/passlib-1.7.4-py2.py3-none-any.whl
         sha256: aa6bca462b8d8bda89c70b382f0c298a20b5560af6cbfa2dce410c0a2fb669f1
       - *id007
-      - *id013
+      - *id014
   - name: python3-Flask-SocketIO
     buildsystem: simple
     build-commands:
@@ -296,21 +299,21 @@ modules:
         --prefix=${FLATPAK_DEST} "WTForms==3.2.*" --no-build-isolation
     sources:
       - *id001
-      - *id013
+      - *id014
   - name: python3-passlib
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "passlib==1.*" --no-build-isolation
     sources:
-      - *id014
+      - *id015
   - name: python3-pytz
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "pytz==2024.*" --no-build-isolation
     sources:
-      - *id015
+      - *id016
   - name: python3-speaklater3
     buildsystem: simple
     build-commands:
@@ -327,8 +330,8 @@ modules:
         --prefix=${FLATPAK_DEST} "sqlparse==0.*" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/7a/13/5f6654c9d915077fae255686ca6fa42095b62b7337e3e1aa9e82caa6f43a/sqlparse-0.5.2-py3-none-any.whl
-        sha256: e99bc85c78160918c3e1d9230834ab8d80fc06c59d03f8db2618f65f65dda55e
+        url: https://files.pythonhosted.org/packages/a9/5c/bfd6bd0bf979426d405cc6e71eceb8701b148b16c21d2dc3c261efc61c7b/sqlparse-0.5.3-py3-none-any.whl
+        sha256: cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca
   - name: python3-psutil
     buildsystem: simple
     build-commands:
@@ -350,13 +353,14 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/53/ba/74caf4eab78d95a173e65cb81507a589365aeafb1d9c84f374002b51dc53/psycopg_c-3.2.3.tar.gz
         sha256: 06ae7db8eaec1a3845960fa7f997f4ccdb1a7a7ab8dc593a680bcc74e1359671
+      - *id011
   - name: python3-python-dateutil
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "python-dateutil==2.*" --no-build-isolation
     sources:
-      - &id019
+      - &id020
         type: file
         url: https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl
         sha256: a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
@@ -366,8 +370,27 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "SQLAlchemy==2.*" --no-build-isolation
     sources:
+      - *id009
       - *id008
-      - *id010
+      - *id011
+  - name: python3-cryptography
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "cryptography==44.0.*" --no-build-isolation
+    sources:
+      - &id017
+        type: file
+        url: https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz
+        sha256: 1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824
+      - &id018
+        type: file
+        url: https://files.pythonhosted.org/packages/91/4c/45dfa6829acffa344e3967d6006ee4ae8be57af746ae2eba1c431949b32c/cryptography-44.0.0.tar.gz
+        sha256: cd4e834f340b4293430701e772ec543b0fbe6c2dea510a5286fe0acabe153a02
+      - &id019
+        type: file
+        url: https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl
+        sha256: c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
   - name: python3-sshtunnel
     buildsystem: simple
     build-commands:
@@ -378,23 +401,14 @@ modules:
         url: https://files.pythonhosted.org/packages/a7/22/27582568be639dfe22ddb3902225f91f2f17ceff88ce80e4db396c8986da/PyNaCl-1.5.0.tar.gz
         sha256: 8ac7448f09ab85811607bdd21ec2464495ac8b7c66d146bf545b0f08fb9220ba
       - type: file
-        url: https://files.pythonhosted.org/packages/e4/7e/d95e7d96d4828e965891af92e43b52a4cd3395dc1c1ef4ee62748d0471d0/bcrypt-4.2.0.tar.gz
-        sha256: cf69eaf5185fd58f268f805b505ce31f9b9fc2d64b376642164e9244540c1221
-      - &id016
-        type: file
-        url: https://files.pythonhosted.org/packages/fc/97/c783634659c2920c3fc70419e3af40972dbaf758daa229a7d6ea6135c90d/cffi-1.17.1.tar.gz
-        sha256: 1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824
-      - &id017
-        type: file
-        url: https://files.pythonhosted.org/packages/0d/05/07b55d1fa21ac18c3a8c79f764e2514e6f6a9698f1be44994f5adf0d29db/cryptography-43.0.3.tar.gz
-        sha256: 315b9001266a492a6ff443b61238f956b214dbec9910a081ba5b6646a055a805
+        url: https://files.pythonhosted.org/packages/56/8c/dd696962612e4cd83c40a9e6b3db77bfe65a830f4b9af44098708584686c/bcrypt-4.2.1.tar.gz
+        sha256: 6765386e3ab87f569b276988742039baab087b2cdb01e809d74e74503c2faafe
+      - *id017
+      - *id018
       - type: file
         url: https://files.pythonhosted.org/packages/1f/66/14b2c030fcce69cba482d205c2d1462ca5c77303a263260dcb1192801c85/paramiko-3.5.0-py3-none-any.whl
         sha256: 1fedf06b085359051cd7d0d270cebe19e755a8a921cc2ddbfa647fb0cd7d68f9
-      - &id018
-        type: file
-        url: https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl
-        sha256: c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
+      - *id019
       - type: file
         url: https://files.pythonhosted.org/packages/58/13/8476c4328dcadfe26f8bd7f3a1a03bf9ddb890a7e7b692f54a179bc525bf/sshtunnel-0.4.0-py2.py3-none-any.whl
         sha256: 98e54c26f726ab8bd42b47a3a21fca5c3e60f58956f0f70de2fb8ab0046d0606
@@ -407,7 +421,7 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/4e/f6/71d6ec9f18da0b2201287ce9db6afb1a1f637dedb3f0703409558981c723/ldap3-2.9.1-py2.py3-none-any.whl
         sha256: 5869596fc4948797020d3f03b7939da938778a0f9e2009f7a072ccf92b8e8d70
-      - &id032
+      - &id033
         type: file
         url: https://files.pythonhosted.org/packages/c8/f1/d6a797abb14f6283c0ddff96bbdd46937f64122b8c925cab503dd37f8214/pyasn1-0.6.1-py3-none-any.whl
         sha256: 0d632f46f2ba09143da3a8afe9e33fb6f92fa2320ab7e886e2d0f7672af84629
@@ -430,8 +444,11 @@ modules:
         --prefix=${FLATPAK_DEST} "user-agents==2.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/db/d5/3cf1bdc3401dda1c45894deac836aaab571c26858f83e1b6d6a7c249d444/ua_parser-0.18.0-py2.py3-none-any.whl
-        sha256: 9d94ac3a80bcb0166823956a779186c746b50ea4c9fd9bf30fdb758553c38950
+        url: https://files.pythonhosted.org/packages/7b/40/1d9998bf360a77185cae08accca90be498ed14fe33ba2100a61cabfbaa3f/ua_parser-1.0.0-py3-none-any.whl
+        sha256: 5b31133606a781f56692caa11a9671a9f330c22604b3c4957a7ba18c152212d0
+      - type: file
+        url: https://files.pythonhosted.org/packages/6f/d3/13adff37f15489c784cc7669c35a6c3bf94b87540229eedf52ef2a1d0175/ua_parser_builtins-0.18.0.post1-py3-none-any.whl
+        sha256: eb4f93504040c3a990a6b0742a2afd540d87d7f9f05fd66e94c101db1564674d
       - type: file
         url: https://files.pythonhosted.org/packages/8f/1c/20bb3d7b2bad56d881e3704131ddedbb16eb787101306887dff349064662/user_agents-2.2.0-py3-none-any.whl
         sha256: a98c4dc72ecbc64812c4534108806fb0a0b3a11ec3fd1eafe807cee5b0a942e7
@@ -444,9 +461,9 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/df/4c/9aa0416a403d5cc80292cb030bcd2c918cce2755e314d8c1aa18656e1e12/Authlib-1.3.2-py2.py3-none-any.whl
         sha256: ede026a95e9f5cdc2d4364a52103f5405e75aa156357e831ef2bfd0bc5094dfc
-      - *id016
       - *id017
       - *id018
+      - *id019
   - name: python3-pyotp
     buildsystem: simple
     build-commands:
@@ -475,19 +492,19 @@ modules:
         --prefix=${FLATPAK_DEST} "boto3==1.35.*" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/99/02/b38e1fdc9129c2e26ea0d86cbb6641ee148ab1886b4827b30d9bd3361c52/boto3-1.35.63-py3-none-any.whl
-        sha256: d0f938d4f6f392b6ffc5e75fff14a42e5bbb5228675a0367c8af55398abadbec
+        url: https://files.pythonhosted.org/packages/b4/db/e6bf2a34d7e8440800fcd11f2b42efd4ba18cce56d5a213bb93bd62aaa0e/boto3-1.35.81-py3-none-any.whl
+        sha256: 742941b2424c0223d2d94a08c3485462fa7c58d816b62ca80f08e555243acee1
       - type: file
-        url: https://files.pythonhosted.org/packages/fd/36/6b1c3ff8258586ce6cdffc4e3b1593d7ff1a97db04f3e99c38b3909ac318/botocore-1.35.63-py3-none-any.whl
-        sha256: 0ca1200694a4c0a3fa846795d8e8a08404c214e21195eb9e010c4b8a4ca78a4a
+        url: https://files.pythonhosted.org/packages/1a/ad/00dfec368dd4e957063ed1126b5511238b0900c1014dfe539af93fc0ac29/botocore-1.35.81-py3-none-any.whl
+        sha256: a7b13bbd959bf2d6f38f681676aab408be01974c46802ab997617b51399239f7
       - type: file
         url: https://files.pythonhosted.org/packages/31/b4/b9b800c45527aadd64d5b442f9b932b00648617eb5d63d2c7a6587b7cafc/jmespath-1.0.1-py3-none-any.whl
         sha256: 02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980
-      - *id019
+      - *id020
       - type: file
-        url: https://files.pythonhosted.org/packages/e5/c0/b0fba8259b61c938c9733da9346b9f93e00881a9db22aafdd72f6ae0ec05/s3transfer-0.10.3-py3-none-any.whl
-        sha256: 263ed587a5803c6c708d3ce44dc4dfedaab4c1a32e8329bab818933d79ddcf5d
-      - &id020
+        url: https://files.pythonhosted.org/packages/66/05/7957af15543b8c9799209506df4660cba7afc4cf94bfb60513827e96bed6/s3transfer-0.10.4-py3-none-any.whl
+        sha256: 244a76a24355363a68164241438de1b72f8781664920260c48465896b712a41e
+      - &id021
         type: file
         url: https://files.pythonhosted.org/packages/33/cf/8435d5a7159e2a9c83a95896ed596f68cf798005fe107cc655b5c5c14704/urllib3-1.26.20-py2.py3-none-any.whl
         sha256: 0ed14ccfbf1c30a9072c7ca157e4319b70d65f623e91e7b32fadb2853431016e
@@ -497,100 +514,100 @@ modules:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "urllib3==1.26.*" --no-build-isolation
     sources:
-      - *id020
+      - *id021
   - name: python3-azure-mgmt-rdbms
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "azure-mgmt-rdbms==10.1.0" --no-build-isolation
     sources:
-      - &id022
+      - &id023
         type: file
         url: https://files.pythonhosted.org/packages/62/55/7f118b9c1b23ec15ca05d15a578d8207aa1706bc6f7c87218efffbbf875d/azure_common-1.1.28-py2.py3-none-any.whl
         sha256: 5c12d3dcf4ec20599ca6b0d3e09e86e146353d443e7fcc050c9a19c1f9df20ad
-      - &id023
+      - &id024
         type: file
         url: https://files.pythonhosted.org/packages/39/83/325bf5e02504dbd8b4faa98197a44cdf8a325ef259b48326a2b6f17f8383/azure_core-1.32.0-py3-none-any.whl
         sha256: eac191a0efb23bfa83fddf321b27b122b4ec847befa3091fa736a5c32c50d7b4
-      - &id024
+      - &id025
         type: file
         url: https://files.pythonhosted.org/packages/ab/2d/762b027cfd58b1b2c9b5b60d112615bd04bc33ef85dac55d2ee739641054/azure_mgmt_core-1.5.0-py3-none-any.whl
         sha256: 18aaa5a723ee8ae05bf1bfc9f6d0ffb996631c7ea3c922cc86f522973ce07b5f
       - type: file
         url: https://files.pythonhosted.org/packages/f0/13/d39466bbbb1da667354aebe5329e575b6b211f40985e426cfb730d87b30f/azure_mgmt_rdbms-10.1.0-py3-none-any.whl
         sha256: 8eac17d1341a91d7ed914435941ba917b5ef1568acabc3e65653603966a7cc88
-      - &id025
-        type: file
-        url: https://files.pythonhosted.org/packages/12/90/3c9ff0512038035f59d279fddeb79f5f1eccd8859f06d6163c58798b9487/certifi-2024.8.30-py3-none-any.whl
-        sha256: 922820b53db7a7257ffbda3f597266d435245903d80737e34f8a45ff3e3230d8
       - &id026
+        type: file
+        url: https://files.pythonhosted.org/packages/a5/32/8f6669fc4798494966bf446c8c4a162e0b5d893dff088afddf76414f70e1/certifi-2024.12.14-py3-none-any.whl
+        sha256: 1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56
+      - &id027
         type: file
         url: https://files.pythonhosted.org/packages/f2/4f/e1808dc01273379acc506d18f1504eb2d299bd4131743b9fc54d7be4df1e/charset_normalizer-3.4.0.tar.gz
         sha256: 223217c3d4f82c3ac5e29032b3f1c2eb0fb591b72161f86d93f5719079dae93e
-      - *id021
-      - &id027
+      - *id022
+      - &id028
         type: file
         url: https://files.pythonhosted.org/packages/15/aa/0aca39a37d3c7eb941ba736ede56d689e7be91cab5d9ca846bde3999eba6/isodate-0.7.2-py3-none-any.whl
         sha256: 28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15
-      - &id029
+      - &id030
         type: file
         url: https://files.pythonhosted.org/packages/15/cf/f2966a2638144491f8696c27320d5219f48a072715075d168b31d3237720/msrest-0.7.1-py3-none-any.whl
         sha256: 21120a810e1233e5e6cc7fe40b474eeb4ec6f757a15d7cf86702c369f9567c32
-      - &id030
+      - &id031
         type: file
         url: https://files.pythonhosted.org/packages/7e/80/cab10959dc1faead58dc8384a781dfbf93cb4d33d50988f7a69f1b7c9bbe/oauthlib-3.2.2-py3-none-any.whl
         sha256: 8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca
-      - &id028
+      - &id029
         type: file
         url: https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl
         sha256: 70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6
-      - &id031
+      - &id032
         type: file
         url: https://files.pythonhosted.org/packages/3b/5d/63d4ae3b9daea098d5d6f5da83984853c1bbacd5dc826764b249fe119d24/requests_oauthlib-2.0.0-py2.py3-none-any.whl
         sha256: 7dd8a5c40426b779b0868c404bdef9768deccf22749cde15852df527e6269b36
-      - *id010
-      - *id020
+      - *id011
+      - *id021
   - name: python3-azure-mgmt-resource
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "azure-mgmt-resource==23.2.0" --no-build-isolation
     sources:
-      - *id022
       - *id023
       - *id024
+      - *id025
       - type: file
         url: https://files.pythonhosted.org/packages/05/ed/85b5e33b2d5ee8ae12228a77f74a484cd6bf58d3288d8524498a02cf0c8c/azure_mgmt_resource-23.2.0-py3-none-any.whl
         sha256: 7af2bca928ecd58e57ea7f7731d245f45e9d927036d82f1d30b96baa0c26b569
-      - *id025
       - *id026
-      - *id021
       - *id027
+      - *id022
       - *id028
-      - *id010
-      - *id020
+      - *id029
+      - *id011
+      - *id021
   - name: python3-azure-mgmt-subscription
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "azure-mgmt-subscription==3.1.1" --no-build-isolation
     sources:
-      - *id022
       - *id023
       - *id024
+      - *id025
       - type: file
         url: https://files.pythonhosted.org/packages/70/12/e6de2021c4689f857386670ba0b6d3c4025d4209e45df7dd7cdabe9a4ac1/azure_mgmt_subscription-3.1.1-py3-none-any.whl
         sha256: 38d4574a8d47fa17e3587d756e296cb63b82ad8fb21cd8543bcee443a502bf48
-      - *id025
       - *id026
-      - *id021
       - *id027
-      - *id029
-      - *id030
+      - *id022
       - *id028
+      - *id030
       - *id031
-      - *id010
-      - *id020
+      - *id029
+      - *id032
+      - *id011
+      - *id021
   - name: python3-azure-identity
     buildsystem: simple
     build-commands:
@@ -598,52 +615,52 @@ modules:
         --prefix=${FLATPAK_DEST} "azure-identity==1.19.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/79/84/0fdf9b18ba31d69877bd39c9cd6052b47f3761e9910c15de788e519f079f/PyJWT-2.9.0-py3-none-any.whl
-        sha256: 3b02fb0f44517787776cf48f2ae25d8e14f300e6d7545a4315cee571a415e850
-      - *id023
+        url: https://files.pythonhosted.org/packages/61/ad/689f02752eeec26aed679477e80e632ef1b682313be70793d798c1d5fc8f/PyJWT-2.10.1-py3-none-any.whl
+        sha256: dcdd193e30abefd5debf142f9adfcdd2b58004e644f25406ffaebd50bd98dacb
+      - *id024
       - type: file
         url: https://files.pythonhosted.org/packages/f0/d5/3995ed12f941f4a41a273d9b1709282e825ef87ed8eab3833038fee54d59/azure_identity-1.19.0-py3-none-any.whl
         sha256: e3f6558c181692d7509f09de10cca527c7dce426776454fb97df512a46527e81
-      - *id025
-      - *id016
       - *id026
       - *id017
-      - *id021
+      - *id027
+      - *id018
+      - *id022
       - type: file
-        url: https://files.pythonhosted.org/packages/cd/40/0a5d743484e1ad00493bdffa8d10d7dbc6a51fec95290ad396e47e79fa43/msal-1.31.0-py3-none-any.whl
-        sha256: 96bc37cff82ebe4b160d5fc0f1196f6ca8b50e274ecd0ec5bf69c438514086e7
+        url: https://files.pythonhosted.org/packages/30/7c/489cd931a752d05753d730e848039f08f65f86237cf1b8724d0a1cbd700b/msal-1.31.1-py3-none-any.whl
+        sha256: 29d9882de247e96db01386496d59f29035e5e841bcac892e6d7bf4390bf6bd17
       - type: file
         url: https://files.pythonhosted.org/packages/2c/69/314d887a01599669fb330da14e5c6ff5f138609e322812a942a74ef9b765/msal_extensions-1.2.0-py3-none-any.whl
         sha256: cf5ba83a2113fa6dc011a254a72f1c223c88d7dfad74cc30617c4679a417704d
       - type: file
         url: https://files.pythonhosted.org/packages/9b/fb/a70a4214956182e0d7a9099ab17d50bfcba1056188e9b14f35b9e2b62a0d/portalocker-2.10.1-py3-none-any.whl
         sha256: 53a5984ebc86a025552264b459b46a2086e269b21823cb572f8f28ee759e45bf
-      - *id018
-      - *id028
-      - *id010
-      - *id020
+      - *id019
+      - *id029
+      - *id011
+      - *id021
   - name: python3-google-api-python-client
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "google-api-python-client==2.*" --no-build-isolation
     sources:
-      - &id033
+      - &id034
         type: file
         url: https://files.pythonhosted.org/packages/a4/07/14f8ad37f2d12a5ce41206c21820d8cb6561b728e51fad4530dff0552a67/cachetools-5.5.0-py3-none-any.whl
         sha256: 02134e8439cdc2ffb62023ce1debca2944c3f289d66bb17ead3ab3dede74b292
-      - *id025
       - *id026
+      - *id027
       - type: file
-        url: https://files.pythonhosted.org/packages/17/a4/c26886d57d90032c5f74c2e80aefdc38ec58551fc46bd4ce79fb2c9389fa/google_api_core-2.23.0-py3-none-any.whl
-        sha256: c20100d4c4c41070cf365f1d8ddf5365915291b5eb11b83829fbd1c999b5122f
+        url: https://files.pythonhosted.org/packages/a1/76/65b8b94e74bf1b6d1cc38d916089670c4da5029d25762441d8c5c19e51dd/google_api_core-2.24.0-py3-none-any.whl
+        sha256: 10d82ac0fca69c82a25b3efdeefccf6f28e02ebb97925a8cce8edbfe379929d9
       - type: file
-        url: https://files.pythonhosted.org/packages/98/08/605a2f2fe31bdaf2b67d23ae82d19199bc6e4158866513b469f062871f0d/google_api_python_client-2.153.0-py2.py3-none-any.whl
-        sha256: 6ff13bbfa92a57972e33ec3808e18309e5981b8ca1300e5da23bf2b4d6947384
-      - &id034
+        url: https://files.pythonhosted.org/packages/4d/6f/d8d446026a6b5a5e1f25604d6b7ddff06dcffcfaea2e95d61a3d5086cbe4/google_api_python_client-2.155.0-py2.py3-none-any.whl
+        sha256: 83fe9b5aa4160899079d7c93a37be306546a17e6686e2549bcc9584f1a229747
+      - &id035
         type: file
-        url: https://files.pythonhosted.org/packages/2d/9a/3d5087d27865c2f0431b942b5c4500b7d1b744dd3262fdc973a4c39d099e/google_auth-2.36.0-py2.py3-none-any.whl
-        sha256: 51a15d47028b66fd36e5c64a82d2d57480075bccc7da37cde257fc94177a61fb
+        url: https://files.pythonhosted.org/packages/8d/8d/4d5d5f9f500499f7bd4c93903b43e8d6976f3fc6f064637ded1a85d09b07/google_auth-2.37.0-py2.py3-none-any.whl
+        sha256: 42664f18290a6be591be5329a96fe30184be1a1badb7292a7f686a9659de9ca0
       - type: file
         url: https://files.pythonhosted.org/packages/be/8a/fe34d2f3f9470a27b01c9e76226965863f153d5fbe276f83608562e49c04/google_auth_httplib2-0.2.0-py2.py3-none-any.whl
         sha256: b65a0a2123300dd71281a7bf6e64d65a0759287df52729bdd1ae2e47dc311a3d
@@ -653,51 +670,51 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/a8/6c/d2fbdaaa5959339d53ba38e94c123e4e84b8fbc4b84beb0e70d7c1608486/httplib2-0.22.0-py3-none-any.whl
         sha256: 14ae0a53c1ba8f3d37e9e27cf37eabb0fb9980f435ba405d546948b009dd64dc
-      - *id021
+      - *id022
       - type: file
         url: https://files.pythonhosted.org/packages/dd/25/0b7cc838ae3d76d46539020ec39fc92bfc9acc29367e58fe912702c2a79e/proto_plus-1.25.0-py3-none-any.whl
         sha256: c91fc4a65074ade8e458e95ef8bac34d4008daa7cce4a12d6707066fca648961
       - type: file
-        url: https://files.pythonhosted.org/packages/74/6e/e69eb906fddcb38f8530a12f4b410699972ab7ced4e21524ece9d546ac27/protobuf-5.28.3.tar.gz
-        sha256: 64badbc49180a5e401f373f9ce7ab1d18b63f7dd4a9cdc43c92b9f0b481cef7b
-      - *id032
-      - &id035
+        url: https://files.pythonhosted.org/packages/d2/4f/1639b7b1633d8fd55f216ba01e21bf2c43384ab25ef3ddb35d85a52033e8/protobuf-5.29.1.tar.gz
+        sha256: 683be02ca21a6ffe80db6dd02c0b5b2892322c59ca57fd6c872d652cb80549cb
+      - *id033
+      - &id036
         type: file
         url: https://files.pythonhosted.org/packages/77/89/bc88a6711935ba795a679ea6ebee07e128050d6382eaa35a0a47c8032bdc/pyasn1_modules-0.4.1-py3-none-any.whl
         sha256: 49bfa96b45a292b711e986f222502c1c9a5e1f4e568fc30e2574a6c7d07838fd
       - type: file
         url: https://files.pythonhosted.org/packages/be/ec/2eb3cd785efd67806c46c13a17339708ddc346cbb684eade7a6e6f79536a/pyparsing-3.2.0-py3-none-any.whl
         sha256: 93d9577b88da0bbea8cc8334ee8b918ed014968fd2ec383e868fb8afb1ccef84
-      - *id028
-      - &id036
+      - *id029
+      - &id037
         type: file
         url: https://files.pythonhosted.org/packages/49/97/fa78e3d2f65c02c8e1268b9aba606569fe97f6c8f7c2d74394553347c145/rsa-4.9-py3-none-any.whl
         sha256: 90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7
       - type: file
         url: https://files.pythonhosted.org/packages/81/c0/7461b49cd25aeece13766f02ee576d1db528f1c37ce69aee300e075b485b/uritemplate-4.1.1-py2.py3-none-any.whl
         sha256: 830c08b8d99bdd312ea4ead05994a38e8936266f84b9a7878232db50b044e02e
-      - *id020
+      - *id021
   - name: python3-google-auth-oauthlib
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "google-auth-oauthlib==1.2.1" --no-build-isolation
     sources:
-      - *id033
-      - *id025
-      - *id026
       - *id034
+      - *id026
+      - *id027
+      - *id035
       - type: file
         url: https://files.pythonhosted.org/packages/1a/8e/22a28dfbd218033e4eeaf3a0533b2b54852b6530da0c0fe934f0cc494b29/google_auth_oauthlib-1.2.1-py2.py3-none-any.whl
         sha256: 2d58a27262d55aa1b87678c3ba7142a080098cbc2024f903c62355deb235d91f
-      - *id021
-      - *id030
-      - *id032
-      - *id035
-      - *id028
+      - *id022
       - *id031
+      - *id033
       - *id036
-      - *id020
+      - *id029
+      - *id032
+      - *id037
+      - *id021
   - name: python3-keyring
     buildsystem: simple
     build-commands:
@@ -707,8 +724,14 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/54/24/b4293291fa1dd830f353d2cb163295742fa87f179fcc8a20a306a81978b7/SecretStorage-3.3.3-py3-none-any.whl
         sha256: f356e6628222568e3af06f2eba8df495efa13b3b63081dafd4f7d9a7b7bc9f99
-      - *id016
+      - type: file
+        url: https://files.pythonhosted.org/packages/b9/fa/123043af240e49752f1c4bd24da5053b6bd00cad78c2be53c0d1e8b975bc/backports.tarfile-1.2.0-py3-none-any.whl
+        sha256: 77e284d754527b01fb1e6fa8a1afe577858ebe4e9dad8919e34c862cb399bc34
       - *id017
+      - *id018
+      - type: file
+        url: https://files.pythonhosted.org/packages/a0/d9/a1e041c5e7caa9a05c925f4bdbdfb7f006d1f74996af53467bc394c97be7/importlib_metadata-8.5.0-py3-none-any.whl
+        sha256: 45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b
       - type: file
         url: https://files.pythonhosted.org/packages/7f/66/b15ce62552d84bbfcec9a4873ab79d993a1dd4edb922cbfccae192bd5b5f/jaraco.classes-3.4.0-py3-none-any.whl
         sha256: f662826b6bed8cace05e7ff873ce0f9283b5c924470fe664fff1c2f00f581790
@@ -727,7 +750,10 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/48/7e/3a64597054a70f7c86eb0a7d4fc315b8c1ab932f64883a297bdffeb5f967/more_itertools-10.5.0-py3-none-any.whl
         sha256: 037b0d3203ce90cca8ab1defbbdac29d5f993fc20131f3664dc8d6acfa872aef
-      - *id018
+      - *id019
+      - type: file
+        url: https://files.pythonhosted.org/packages/b7/1a/7e4798e9339adc931158c9d69ecc34f5e6791489d469f5e50ec15e35f458/zipp-3.21.0-py3-none-any.whl
+        sha256: ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931
   - name: python3-Werkzeug
     buildsystem: simple
     build-commands:
@@ -740,7 +766,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "typer[all]==0.12.*" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "typer[all]==0.14.*" --no-build-isolation
     sources:
       - *id003
       - type: file
@@ -756,18 +782,18 @@ modules:
         url: https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl
         sha256: 7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686
       - type: file
-        url: https://files.pythonhosted.org/packages/a8/2b/886d13e742e514f704c33c4caa7df0f3b89e5a25ef8db02aa9ca3d9535d5/typer-0.12.5-py3-none-any.whl
-        sha256: 62fe4e471711b147e3365034133904df3e235698399bc4de2b36c8579298d52b
-      - *id010
+        url: https://files.pythonhosted.org/packages/bb/d8/a3ab71d5587b42b832a7ef2e65b3e51a18f8da32b6ce169637d4d21995ed/typer-0.14.0-py3-none-any.whl
+        sha256: f476233a25770ab3e7b2eebf7c68f3bc702031681a008b20167573a4b7018f09
+      - *id011
   - name: python3-jsonformatter
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "jsonformatter~=0.3.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "jsonformatter~=0.3.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/33/b8/0d2416049891bdaa19b37d135a0e38221f842a96075295a15ac9bbdc24e8/jsonformatter-0.3.2.tar.gz
-        sha256: d69c4b294cd9030b6803659924908f979ae827f5bdccde6a3815c0afb062948f
+        url: https://files.pythonhosted.org/packages/f4/2d/efe13a6a42128f31f920f0058857294bb28179e1e2c4c756782701932feb/jsonformatter-0.3.4.tar.gz
+        sha256: af71ae1534a80d6f60f8d5ee7bfa70c2e45389ed803ed94239f4305b7c68105d
   - name: python3-libgravatar
     buildsystem: simple
     build-commands:
