@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -59,8 +59,8 @@ modules:
         bcrypt
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/3e/d0/31938bb697600a04864246acde4918c4190a938f891fd11883eaaf41327a/bcrypt-4.2.0-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: 3d3a6d28cb2305b43feac298774b997e372e56c7c7afd90a12b3dc49b189151c
+        url: https://files.pythonhosted.org/packages/d6/c3/4b4bad4da852924427c651589d464ad1aa624f94dd904ddda8493b0a35e5/bcrypt-4.2.1-cp39-abi3-manylinux_2_28_x86_64.whl
+        sha256: 687cf30e6681eeda39548a93ce9bfbb300e48b4d445a43db4298d2474d2a1e54
         x-checker-data:
           type: pypi
           name: bcrypt
@@ -100,8 +100,8 @@ modules:
         cryptography
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ac/25/e715fa0bc24ac2114ed69da33adf451a38abb6f3f24ec207908112e9ba53/cryptography-43.0.3-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: c2e6fc39c4ab499049df3bdf567f768a723a5e8464816e8f009f121a5a9f4405
+        url: https://files.pythonhosted.org/packages/ef/82/72403624f197af0db6bac4e58153bc9ac0e6020e57234115db9596eee85d/cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl
+        sha256: f53c2c87e0fb4b0c00fa9571082a057e37690a8f12233306161c8f4b819960b7
         x-checker-data:
           type: pypi
           name: cryptography
@@ -118,9 +118,9 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_8.13_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_8.14_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: cf907ca828c613bf230c2b7207b36959f15c7609c1365118f3db00fbd25f2208
+        sha256: ade25d36f374d3bc06917b9566efb07b2f5cfe2847de62d5cfaa4d113afa15af
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -142,9 +142,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_8.13_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_8.14_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: d76b4a29e9519f24b54b9147847cc610999b3e5e0dd600600e310aa77f505ac8
+        sha256: 0a823f5f9cb6d8f56237ff4e06e3eff9d87f8d4a6aaf3b8dda31cdd18086fd84
         x-checker-data:
           type: anitya
           project-id: 6603
