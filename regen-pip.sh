@@ -1,5 +1,5 @@
 # Increase this on each version update and rerun the script
-wget https://raw.githubusercontent.com/pgadmin-org/pgadmin4/REL-8_14/requirements.txt
+wget https://raw.githubusercontent.com/pgadmin-org/pgadmin4/REL-9_0/requirements.txt
 
 # https://github.com/flatpak/flatpak-builder-tools/issues/365
 cat requirements.txt | grep -v "<= '3.8'" | grep -v "<= '3.9'" | grep -v "<= '3.10'" | grep -v sys_platform==\"win32\" > requirements_filtered.txt
