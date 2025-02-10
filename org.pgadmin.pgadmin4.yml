@@ -61,9 +61,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/d6/c3/4b4bad4da852924427c651589d464ad1aa624f94dd904ddda8493b0a35e5/bcrypt-4.2.1-cp39-abi3-manylinux_2_28_x86_64.whl
         sha256: 687cf30e6681eeda39548a93ce9bfbb300e48b4d445a43db4298d2474d2a1e54
-        x-checker-data:
-          type: pypi
-          name: bcrypt
 
   - name: python3-pycparser
     buildsystem: simple
@@ -87,9 +84,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/b2/d5/da47df7004cb17e4955df6a43d14b3b4ae77737dff8bf7f8f333196717bf/cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
         sha256: b62ce867176a75d03a665bad002af8e6d54644fad99a3c70905c543130e39d93
-        x-checker-data:
-          type: pypi
-          name: cffi
 
   - name: python3-cryptography
     buildsystem: simple
@@ -102,9 +96,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/ef/82/72403624f197af0db6bac4e58153bc9ac0e6020e57234115db9596eee85d/cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl
         sha256: f53c2c87e0fb4b0c00fa9571082a057e37690a8f12233306161c8f4b819960b7
-        x-checker-data:
-          type: pypi
-          name: cryptography
 
   - python3-requirements_filtered.yaml
 
