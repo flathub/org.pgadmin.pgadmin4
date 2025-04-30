@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -59,8 +59,8 @@ modules:
         bcrypt
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d6/c3/4b4bad4da852924427c651589d464ad1aa624f94dd904ddda8493b0a35e5/bcrypt-4.2.1-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: 687cf30e6681eeda39548a93ce9bfbb300e48b4d445a43db4298d2474d2a1e54
+        url: https://files.pythonhosted.org/packages/dc/7f/1e36379e169a7df3a14a1c160a49b7b918600a6008de43ff20d479e6f4b5/bcrypt-4.3.0-cp39-abi3-manylinux_2_34_x86_64.whl
+        sha256: 531457e5c839d8caea9b589a1bcfe3756b0547d7814e9ce3d437f17da75c32b0
 
   - name: python3-pycparser
     buildsystem: simple
@@ -94,8 +94,8 @@ modules:
         cryptography
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ef/82/72403624f197af0db6bac4e58153bc9ac0e6020e57234115db9596eee85d/cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl
-        sha256: f53c2c87e0fb4b0c00fa9571082a057e37690a8f12233306161c8f4b819960b7
+        url: https://files.pythonhosted.org/packages/89/33/c1cf182c152e1d262cac56850939530c05ca6c8d149aa0dcee490b417e99/cryptography-44.0.2-cp39-abi3-manylinux_2_34_x86_64.whl
+        sha256: c7362add18b416b69d58c910caa217f980c5ef39b23a38a0880dfd87bdf8cd23
 
   - python3-requirements_filtered.yaml
 
@@ -109,9 +109,9 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.2_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.3_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: 35f8d600e1ae7b319a1c73e975eabc3985b857c8fa5a523a92ac8cc5cf2e3a71
+        sha256: f7a3821cc5cae72c9496be8f2534d59260a008a6203e050d5dc69e9fde77f481
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -133,9 +133,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.2_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.3_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: dc39470d013e72518b1467ca64c6cd22bc624bbcb3cb89ca07125d9df173f6b0
+        sha256: 52f39f499ce01cb3aea133b36f8ed0f4e8f05ed7a3544cd11042a8172e25a143
         x-checker-data:
           type: anitya
           project-id: 6603
