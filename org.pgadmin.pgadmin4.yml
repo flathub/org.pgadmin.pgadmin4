@@ -12,6 +12,7 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=x11
+  - --socket=wayland
   - --socket=pulseaudio
   - --device=dri
   - --talk-name=org.freedesktop.secrets
@@ -143,7 +144,7 @@ modules:
 
       - type: script
         commands:
-          - zypak-wrapper /app/pgAdmin4/bin/pgadmin4
+          - zypak-wrapper /app/pgAdmin4/bin/pgadmin4 "$@"
         dest-filename: run.sh
 
       - type: file
