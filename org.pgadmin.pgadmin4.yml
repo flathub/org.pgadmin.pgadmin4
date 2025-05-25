@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '24.08'
 base: org.electronjs.Electron2.BaseApp
-base-version: "24.08"
+base-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://git.postgresql.org/git/postgresql.git
-        commit: f8554dee417ffc4540c94cf357f7bf7d4b6e5d80
-        tag: REL_17_4
+        commit: 5e2f3df49d4298c6097789364a5a53be172f6e85
+        tag: REL_17_5
         x-checker-data:
           type: git
           tag-pattern: ^REL_([\d_]+)$
