@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://git.postgresql.org/git/postgresql.git
-        commit: 5e2f3df49d4298c6097789364a5a53be172f6e85
-        tag: REL_17_5
+        commit: 7885b94dd81b98bbab9ed878680d156df7bf857f
+        tag: REL_17_6
         x-checker-data:
           type: git
           tag-pattern: ^REL_([\d_]+)$
@@ -44,8 +44,8 @@ modules:
       - --disable-rpath
     sources:
       - type: archive
-        url: https://kerberos.org/dist/krb5/1.21/krb5-1.21.3.tar.gz
-        sha256: b7a4cd5ead67fb08b980b21abd150ff7217e85ea320c9ed0c6dadd304840ad35
+        url: https://kerberos.org/dist/krb5/1.22/krb5-1.22.tar.gz
+        sha256: 652be617b4647f3c5dcac21547d47c7097101aad4e306f1778fb48e17b220ba3
         x-checker-data:
           type: html
           url: https://kerberos.org/dist/
