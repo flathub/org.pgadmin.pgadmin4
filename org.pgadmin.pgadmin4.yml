@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://git.postgresql.org/git/postgresql.git
-        commit: 5e2f3df49d4298c6097789364a5a53be172f6e85
-        tag: REL_17_5
+        commit: 7885b94dd81b98bbab9ed878680d156df7bf857f
+        tag: REL_17_6
         x-checker-data:
           type: git
           tag-pattern: ^REL_([\d_]+)$
@@ -44,8 +44,8 @@ modules:
       - --disable-rpath
     sources:
       - type: archive
-        url: https://kerberos.org/dist/krb5/1.21/krb5-1.21.3.tar.gz
-        sha256: b7a4cd5ead67fb08b980b21abd150ff7217e85ea320c9ed0c6dadd304840ad35
+        url: https://kerberos.org/dist/krb5/1.22/krb5-1.22.tar.gz
+        sha256: 652be617b4647f3c5dcac21547d47c7097101aad4e306f1778fb48e17b220ba3
         x-checker-data:
           type: html
           url: https://kerberos.org/dist/
@@ -109,9 +109,9 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.5_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.6_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: fc302407b5c116a59b2cf2028a8e65249e6603a147e5c7081abe9611b56030c5
+        sha256: 8814e4c4b2621fe19fcd8625ba430a2cf5b25a2d63d0b5add6ef674859ee0bc0
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -133,9 +133,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.5_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.6_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: 669fdbb300b6dba81690881925dd91f2a08fcf595474bd6a219b486305fb11ca
+        sha256: cbe3497ccd2f3e1a718573846c324082beaaf2bd3a999484d95c20b31fb14c77
         x-checker-data:
           type: anitya
           project-id: 6603
