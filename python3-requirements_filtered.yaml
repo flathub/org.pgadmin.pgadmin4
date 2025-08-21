@@ -55,7 +55,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "azure-identity==1.23.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "azure-identity==1.24.0" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/61/ad/689f02752eeec26aed679477e80e632ef1b682313be70793d798c1d5fc8f/PyJWT-2.10.1-py3-none-any.whl
@@ -65,8 +65,8 @@ modules:
         url: https://files.pythonhosted.org/packages/d4/78/bf94897361fdd650850f0f2e405b2293e2f12808239046232bdedf554301/azure_core-1.35.0-py3-none-any.whl
         sha256: 8db78c72868a58f3de8991eb4d22c4d368fae226dac1002998d6c50437e7dad1
       - type: file
-        url: https://files.pythonhosted.org/packages/07/16/a51d47780f41e4b87bb2d454df6aea90a44a346e918ac189d3700f3d728d/azure_identity-1.23.0-py3-none-any.whl
-        sha256: dbbeb64b8e5eaa81c44c565f264b519ff2de7ff0e02271c49f3cb492762a50b0
+        url: https://files.pythonhosted.org/packages/a9/74/17428cb429e8d52f6d0d69ed685f4760a545cb0156594963a9337b53b6c9/azure_identity-1.24.0-py3-none-any.whl
+        sha256: 9e04997cde0ab02ed66422c74748548e620b7b29361c72ce622acab0267ff7c4
       - &id005
         type: file
         url: https://files.pythonhosted.org/packages/e5/48/1549795ba7742c948d2ad169c1c8cdbae65bc450d6cd753d124b17c8cd32/certifi-2025.8.3-py3-none-any.whl
@@ -185,14 +185,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "boto3==1.39.*" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "boto3==1.40.*" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f0/45/8321081d478881779551692a185bbe19574a2ac87294f5096c549837292c/boto3-1.39.17-py3-none-any.whl
-        sha256: 6af9f7d6db7b5e72d6869ae22ebad1b0c6602591af2ef5d914b331a055953df5
+        url: https://files.pythonhosted.org/packages/7d/d7/83ddd51e8304bea0c24117de9724506a1c407ba995f07c5dc5069f6ad6eb/boto3-1.40.14-py3-none-any.whl
+        sha256: ab5798a03582d09c0de132d080c9aee53d5647b6461261a5b7621170ec80d92b
       - type: file
-        url: https://files.pythonhosted.org/packages/bc/40/d16536e0db30c35c14cfd7f2227fccb59f7b999b501ed410bddb9e1492cf/botocore-1.39.17-py3-none-any.whl
-        sha256: 41db169e919f821b3ef684794c5e67dd7bb1f5ab905d33729b1d8c27fafe8004
+        url: https://files.pythonhosted.org/packages/cd/c3/47a5ee306a52c99b1ca5e6712c27666ddc7b9c102296d86ff90eda598331/botocore-1.40.14-py3-none-any.whl
+        sha256: 06c852be83543c8d45e18a530abcad31659db8b16bcb66fd371c930d38017e7c
       - type: file
         url: https://files.pythonhosted.org/packages/31/b4/b9b800c45527aadd64d5b442f9b932b00648617eb5d63d2c7a6587b7cafc/jmespath-1.0.1-py3-none-any.whl
         sha256: 02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980
