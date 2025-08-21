@@ -40,6 +40,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="9.7" date="2025-08-21">
+      <description></description>
+    </release>
     <release version="9.5" date="2025-06-30"><url>https://www.pgadmin.org/docs/pgadmin4/9.5/release_notes_9_5.html</url></release>
     <release version="9.4" date="2025-05-29"><url>https://www.pgadmin.org/docs/pgadmin4/9.4/release_notes_9_4.html</url></release>
     <release version="9.3" date="2025-04-30"><url>https://www.pgadmin.org/docs/pgadmin4/9.3/release_notes_9_3.html</url></release>
