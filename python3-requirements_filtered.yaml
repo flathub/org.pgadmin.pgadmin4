@@ -348,6 +348,15 @@ modules:
       - *id021
       - *id022
       - *id023
+  - name: python3-passlib
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "passlib==1.*" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/3b/a4/ab6b7589382ca3df236e03faa71deac88cae040af60c071a78d254a62172/passlib-1.7.4-py2.py3-none-any.whl
+        sha256: aa6bca462b8d8bda89c70b382f0c298a20b5560af6cbfa2dce410c0a2fb669f1
   - name: python3-Flask-Security-Too
     buildsystem: simple
     build-commands:
@@ -617,15 +626,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/7c/cc/1c5f1d887800035bf0c93f204190ae26f859ab0e00f7ff523324395716b8/libgravatar-1.0.4-py2.py3-none-any.whl
         sha256: f967619b38914e0f941e53387881005e43929814571103f6bbfa2afd75045e20
-  - name: python3-passlib
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "passlib==1.*" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/3b/a4/ab6b7589382ca3df236e03faa71deac88cae040af60c071a78d254a62172/passlib-1.7.4-py2.py3-none-any.whl
-        sha256: aa6bca462b8d8bda89c70b382f0c298a20b5560af6cbfa2dce410c0a2fb669f1
   - name: python3-psutil
     buildsystem: simple
     build-commands:
