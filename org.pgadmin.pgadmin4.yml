@@ -109,9 +109,9 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.7_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.8_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: cf8eac4b68e3fec7272fee3bbaf7440d2cb608e870ebdeb6799caffc680621f1
+        sha256: fc6518434f5a395bc39fdd367648fe999a936ed608d09f5d941f3b372b37b6d1
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -133,9 +133,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.7_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.8_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: ad3038825c3dd4146f301fabffc58afadfb4f4ed710ad7e32caf86e2b2ab19e7
+        sha256: 1de386f62e0c0389df294a949857fa4e2841d3b016f0e7741c3fa614e86cce5c
         x-checker-data:
           type: anitya
           project-id: 6603
