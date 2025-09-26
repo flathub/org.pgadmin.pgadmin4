@@ -29,8 +29,8 @@ modules:
     sources:
       - type: git
         url: https://git.postgresql.org/git/postgresql.git
-        commit: 7885b94dd81b98bbab9ed878680d156df7bf857f
-        tag: REL_17_6
+        commit: 3d6a828938a5fa0444275d3d2f67b64ec3199eb7
+        tag: REL_18_0
         x-checker-data:
           type: git
           tag-pattern: ^REL_([\d_]+)$
