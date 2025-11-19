@@ -75,6 +75,7 @@ modules:
         x-checker-data:
           type: pypi
           name: pycparser
+          packagetype: bdist_wheel
 
   - name: python3-cffi
     buildsystem: simple
