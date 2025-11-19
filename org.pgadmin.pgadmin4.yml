@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -70,8 +70,8 @@ modules:
         pycparser
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/fe/cf/d2d3b9f5699fb1e4615c8e32ff220203e43b248e1dfcc6736ad9057731ca/pycparser-2.23.tar.gz
-        sha256: 78816d4f24add8f10a06d6f05b4d424ad9e96cfebf68a4ddc99c65c0720d00c2
+        url: https://files.pythonhosted.org/packages/a0/e3/59cd50310fc9b59512193629e1984c1f95e5c8ae6e5d8c69532ccc65a7fe/pycparser-2.23-py3-none-any.whl
+        sha256: e5c6e8d3fbad53479cab09ac03729e0a9faf2bee3db8208a550daf5af81a5934
         x-checker-data:
           type: pypi
           name: pycparser
@@ -110,13 +110,13 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.9_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/plucky/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.10-1.plucky_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: e526357c3b18cef657d29f5981f087b283bb60218a844ff20413ddf896ea2aff
+        sha256: 8668a977ea91be92b1f48bf09b7af38e54f206868e31e3b96b52ffe46828bde1
         x-checker-data:
           type: anitya
           project-id: 6603
-          url-template: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-server_${version}_amd64.deb
+          url-template: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/plucky/dists/pgadmin4/main/binary-amd64/pgadmin4-server_${version}_amd64.deb
       - type: file
         path: config_distro.py
 
@@ -134,13 +134,13 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.9_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/plucky/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.10-1.plucky_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: 923d638fdc3cf032bfe689e3c4e57359dbe37da18f2ffa144395d9e6ceb78cda
+        sha256: 1fc103aaf1e7dd2ea73d9fc93b4354df0a054441ae7a72343f9dca43d1a5d622
         x-checker-data:
           type: anitya
           project-id: 6603
-          url-template: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_${version}_amd64.deb
+          url-template: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/plucky/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_${version}_amd64.deb
 
       - type: script
         commands:
