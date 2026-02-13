@@ -32,11 +32,11 @@
   <screenshots>
     <screenshot type="default">
       <caption>Welcome screen, standard theme</caption>
-      <image type="source">https://www.pgadmin.org/static/COMPILED/assets/img/screenshots/pgadmin4-welcome-light.png</image>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/master/img/welcome.png</image>
     </screenshot>
     <screenshot>
       <caption>Server dashboard</caption>
-      <image type="source">https://www.pgadmin.org/static/COMPILED/assets/img/screenshots/pgadmin4-dashboard.png</image>
+      <image type="source">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/master/img/dashboard.png</image>
     </screenshot>
   </screenshots>
   <releases>
