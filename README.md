@@ -17,10 +17,6 @@ You can regenerate pip dependencies with the script `regen-pip.sh`, but you will
 Build flatpak:
 
 ```sh
-# Install flatpak build dependencies
-# Please check org.pgadmin.pgadmin4.yml for the exact version required e.g. 24.08
-flatpak install org.electronjs.Electron2.BaseApp/x86_64/24.08 org.freedesktop.Sdk/x86_64/24.08 org.flatpak.Builder
-
 flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install org.pgadmin.pgadmin4.yml
 ```
 
@@ -36,6 +32,8 @@ or just search for the installed app on your system
 > If you get `No matching distribution found for backports.zstd; python_version < "3.14"` from `python3-Flask-Compress` while building the Flatpak, add the dependency manually. Grab the download URL and SHA256 from the [backports.zstd PyPI](https://pypi.org/project/backports.zstd/) "Download files" section and include them in your sources. This could happen with `python3-google-api-python-client` and its dependency `cachetools`.
 
 ```yaml
+# python3-requirements_filtered.yaml
+
 ...
 - name: python3-Flask-Compress
   buildsystem: simple
