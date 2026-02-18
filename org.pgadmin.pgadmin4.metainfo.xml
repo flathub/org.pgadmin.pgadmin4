@@ -32,19 +32,19 @@
   <screenshots>
     <screenshot type="default">
       <caption>Welcome screen</caption>
-      <image type="source" environment="gnome">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/22dd2e4d54b6a14b31fe73c26d37139f1e31dc8f/img/welcome.png</image>
+      <image type="source" environment="gnome">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/fd66f210f71a1ae15dff6e2bd4a3817436afc668/img/welcome.png</image>
     </screenshot>
     <screenshot type="default">
       <caption>Welcome screen, dark theme</caption>
-      <image type="source" environment="gnome:dark">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/22dd2e4d54b6a14b31fe73c26d37139f1e31dc8f/img/welcome-dark.png</image>
+      <image type="source" environment="gnome:dark">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/fd66f210f71a1ae15dff6e2bd4a3817436afc668/img/welcome-dark.png</image>
     </screenshot>
     <screenshot>
       <caption>Server dashboard</caption>
-      <image type="source" environment="gnome">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/22dd2e4d54b6a14b31fe73c26d37139f1e31dc8f/img/dashboard.png</image>
+      <image type="source" environment="gnome">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/fd66f210f71a1ae15dff6e2bd4a3817436afc668/img/dashboard.png</image>
     </screenshot>
     <screenshot>
       <caption>Server dashboard, dark theme</caption>
-      <image type="source" environment="gnome:dark">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/22dd2e4d54b6a14b31fe73c26d37139f1e31dc8f/img/dashboard-dark.png</image>
+      <image type="source" environment="gnome:dark">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/fd66f210f71a1ae15dff6e2bd4a3817436afc668/img/dashboard-dark.png</image>
     </screenshot>
   </screenshots>
   <releases>
