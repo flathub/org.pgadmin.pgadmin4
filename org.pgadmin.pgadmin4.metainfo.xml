@@ -31,12 +31,20 @@
   <url type="help">https://www.pgadmin.org/docs/pgadmin4/latest/index.html</url>
   <screenshots>
     <screenshot type="default">
-      <caption>Welcome screen, standard theme</caption>
-      <image type="source">https://raw.githubusercontent.com/nazebzurati/org.pgadmin.pgadmin4/79a08b5edae6fa3c4137b6184cfe851adb199c88/img/welcome.png</image>
+      <caption>Welcome screen</caption>
+      <image type="source" environment="gnome">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/19c88423b13885498a83991b9da75dd32ff8cd6b/img/welcome.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Welcome screen, dark theme</caption>
+      <image type="source" environment="gnome:dark">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/19c88423b13885498a83991b9da75dd32ff8cd6b/img/welcome-dark.png</image>
     </screenshot>
     <screenshot>
       <caption>Server dashboard</caption>
-      <image type="source">https://raw.githubusercontent.com/nazebzurati/org.pgadmin.pgadmin4/79a08b5edae6fa3c4137b6184cfe851adb199c88/img/dashboard.png</image>
+      <image type="source" environment="gnome">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/19c88423b13885498a83991b9da75dd32ff8cd6b/img/dashboard.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Server dashboard, dark theme</caption>
+      <image type="source" environment="gnome:dark">https://raw.githubusercontent.com/flathub/org.pgadmin.pgadmin4/19c88423b13885498a83991b9da75dd32ff8cd6b/img/dashboard-dark.png</image>
     </screenshot>
   </screenshots>
   <releases>
