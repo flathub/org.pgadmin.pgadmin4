@@ -14,6 +14,31 @@ You can regenerate pip dependencies with the script `regen-pip.sh`, but you will
 ./regen-pip.sh
 ```
 
+## Updating pgAdmin
+
+1. Confirm the new version is available in the [Ubuntu Plucky package repository](https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/plucky/dists/pgadmin4/main/binary-amd64/). The manifest cannot use an upstream release until both its `pgadmin4-server` and `pgadmin4-desktop` packages are present there.
+2. Update both package URLs and SHA256 checksums in `org.pgadmin.pgadmin4.yml`. The checksums are listed in the repository's [`Packages` index](https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/plucky/dists/pgadmin4/main/binary-amd64/Packages).
+3. Add the release to `org.pgadmin.pgadmin4.metainfo.xml`, including its release date and the upstream release-notes URL as the other releases.
+4. Update the release branch in `regen-pip.sh`, then regenerate the Python sources. Keep `bcrypt` and `cryptography` in `--ignore-pkg` because the manifest provides compatible wheels for them separately:
+
+```sh
+./regen-pip.sh
+```
+
+5. Review all generated dependency changes, then validate the metadata and manifest:
+
+```sh
+appstreamcli validate --no-net org.pgadmin.pgadmin4.metainfo.xml
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest org.pgadmin.pgadmin4.yml
+```
+
+6. Build and install the updated Flatpak before submitting the change:
+
+```sh
+flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install org.pgadmin.pgadmin4.yml
+flatpak run org.pgadmin.pgadmin4
+```
+
 Build flatpak:
 
 ```sh
