@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "25.08"
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -84,8 +84,8 @@ modules:
         cffi
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/78/2d/7fa73dfa841b5ac06c7b8855cfc18622132e365f5b81d02230333ff26e9e/cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
-        sha256: 3e17ed538242334bf70832644a32a7aae3d83b57567f9fd60a26257e992b79ba
+        url: https://files.pythonhosted.org/packages/98/df/0a1755e750013a2081e863e7cd37e0cdd02664372c754e5560099eb7aa44/cffi-2.0.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+        sha256: c8d3b5532fc71b7a77c09192b4a5a200ea992702734a2e9279a37f2478236f26
 
   - name: python3-cryptography
     buildsystem: simple
@@ -96,8 +96,8 @@ modules:
         cryptography
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/94/87/f2b6c374a82cf076cfa1416992ac8e8ec94d79facc37aec87c1a5cb72352/cryptography-47.0.0-cp38-abi3-manylinux_2_34_x86_64.whl
-        sha256: 2207a498b03275d0051589e326b79d4cf59985c99031b05bb292ac52631c37fe
+        url: https://files.pythonhosted.org/packages/34/4f/e5711b28e1901f7d480a2b1b688b645aa4c77c73f10731ed17e7f7db3f0d/cryptography-47.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
+        sha256: 4e1de79e047e25d6e9f8cea71c86b4a53aced64134f0f003bbcbf3655fd172c8
 
   - python3-requirements_filtered.yaml
 
