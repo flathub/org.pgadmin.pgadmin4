@@ -1,8 +1,8 @@
 app-id: org.pgadmin.pgadmin4
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 base: org.electronjs.Electron2.BaseApp
-base-version: "25.08"
+base-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
@@ -104,15 +104,16 @@ modules:
   - name: pgadmin4-server
     buildsystem: simple
     build-commands:
-      - bsdtar -Oxf pgadmin-server.deb 'data.tar.xz' | bsdtar --exclude 'usr/pgadmin4/venv' -xf -
+      - bsdtar -Oxf pgadmin-server.deb 'data.tar.xz' | bsdtar --exclude 'usr/pgadmin4/venv'
+        -xf -
       - cp -r usr/* ${FLATPAK_DEST}/
       - mv ${FLATPAK_DEST}/pgadmin4 ${FLATPAK_DEST}/pgAdmin4
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.15-1.trixie_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.16-1.trixie_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: e6ca715bf4356c635e66c6defdbad39d47f817b4cd02b3b7575008b1dc330846
+        sha256: 2f6bb89376aa9b2636d5f99787dd6091d5aa29870a0863c60ed37d57eb12cba0
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -134,9 +135,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.15-1.trixie_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.16-1.trixie_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: d21b2e9eed588520dbd6432545c4b74efe5d164ae2ea775cf13d0ce4922dda55
+        sha256: 42e13d98b72838395a01b6806f21b6a9cc18982f4eb67a87eac1b0f32ee050f6
         x-checker-data:
           type: anitya
           project-id: 6603
