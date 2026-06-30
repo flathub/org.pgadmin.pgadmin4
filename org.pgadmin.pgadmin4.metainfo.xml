@@ -48,6 +48,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="9.16" date="2026-06-18"><url>https://www.pgadmin.org/docs/pgadmin4/9.16/release_notes_9_16.html</url></release>
     <release version="9.15" date="2026-05-11"><url>https://www.pgadmin.org/docs/pgadmin4/9.15/release_notes_9_15.html</url></release>
     <release version="9.14" date="2026-04-02"><url>https://www.pgadmin.org/docs/pgadmin4/9.14/release_notes_9_14.html</url></release>
     <release version="9.13" date="2026-03-05"><url>https://www.pgadmin.org/docs/pgadmin4/9.13/release_notes_9_13.html</url></release>

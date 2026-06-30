@@ -96,8 +96,8 @@ modules:
         cryptography
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/34/4f/e5711b28e1901f7d480a2b1b688b645aa4c77c73f10731ed17e7f7db3f0d/cryptography-47.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
-        sha256: 4e1de79e047e25d6e9f8cea71c86b4a53aced64134f0f003bbcbf3655fd172c8
+        url: https://files.pythonhosted.org/packages/a9/3c/f3ad17eecc1a57b0ba236dc01f90e783c51f4a2f35f64777cc4f47a184b2/cryptography-49.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
+        sha256: cbc77da8c523d5abd028635ba850a6966fcee2c82e2bf65a41d1d8afe0f98be9
 
   - python3-requirements_filtered.yaml
 
@@ -110,9 +110,9 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.15-1.trixie_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.16-1.trixie_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: e6ca715bf4356c635e66c6defdbad39d47f817b4cd02b3b7575008b1dc330846
+        sha256: 2f6bb89376aa9b2636d5f99787dd6091d5aa29870a0863c60ed37d57eb12cba0
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -134,9 +134,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.15-1.trixie_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.16-1.trixie_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: d21b2e9eed588520dbd6432545c4b74efe5d164ae2ea775cf13d0ce4922dda55
+        sha256: 42e13d98b72838395a01b6806f21b6a9cc18982f4eb67a87eac1b0f32ee050f6
         x-checker-data:
           type: anitya
           project-id: 6603
