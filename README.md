@@ -14,6 +14,22 @@ You can regenerate pip dependencies with the script `regen-pip.sh`, but you will
 ./regen-pip.sh
 ```
 
+## Updating pgAdmin
+
+1. Update both pgAdmin package URLs and SHA256 checksums in `org.pgadmin.pgadmin4.yml`. Keep the server and desktop packages on the same version and Debian distribution.
+2. Update `PGADMIN_VERSION` in `regen-pip.sh`, for example from `9_16` to `9_17`, then run `./regen-pip.sh` to regenerate `python3-requirements_filtered.yaml`.
+3. Check the generated dependencies for environment-marker omissions. In particular, preserve the manually added `backports.zstd` source described below when the Flatpak runtime still uses Python 3.13.
+4. Add the release version, upstream release date and release-notes URL to `org.pgadmin.pgadmin4.metainfo.xml`.
+5. Validate and build the update:
+
+```sh
+appstreamcli validate --no-net org.pgadmin.pgadmin4.metainfo.xml
+flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest org.pgadmin.pgadmin4.yml
+flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install org.pgadmin.pgadmin4.yml
+```
+
+If upstream changes bundled PostgreSQL utilities or the required runtime, update those manifest sources before regenerating dependencies.
+
 Build flatpak:
 
 ```sh
