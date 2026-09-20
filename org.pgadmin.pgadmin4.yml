@@ -111,9 +111,9 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.17-1.trixie_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.18-1.trixie_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: 96c3ba8a5202573a294515a47a9306a8d9de11ebb6b580fd3bcd891db7ec013a
+        sha256: c2abb7e010041a82bcdf77a4314166c573d511f4865b388f6d7d78a9ab3937cf
         x-checker-data:
           type: anitya
           project-id: 6603
@@ -135,9 +135,9 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.17-1.trixie_amd64.deb
+        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.18-1.trixie_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: 975bb053142c2f8238da9503bcf027fb6373d5cdbfab12e5e31caa9700c7ea32
+        sha256: b3f928d8a3ed0d12a442886e3679889baf4c5cd1e973358c99c90515d288814f
         x-checker-data:
           type: anitya
           project-id: 6603
