@@ -1,5 +1,5 @@
 # Increase this on each version update and rerun the script
-PGADMIN_VERSION=9_17
+PGADMIN_VERSION=9_18
 
 wget "https://raw.githubusercontent.com/pgadmin-org/pgadmin4/REL-${PGADMIN_VERSION}/requirements.txt"
 
@@ -11,7 +11,7 @@ sed -i "1 i pybind11" requirements_filtered.txt # pillow requires pybind11 to bu
 wget https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/refs/heads/master/pip/flatpak-pip-generator.py
 uv run --with pyyaml ./flatpak-pip-generator.py --yaml \
         --requirements-file=requirements_filtered.txt \
-        --ignore-pkg bcrypt==5.0.* cryptography==46.0.*
+        --ignore-pkg bcrypt==5.0.* cryptography==50.0.*
 
 rm requirements.txt
 rm requirements_filtered.txt
