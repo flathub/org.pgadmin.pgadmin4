@@ -60,7 +60,8 @@ modules:
         bcrypt
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d4/8d/5e43d9584b3b3591a6f9b68f755a4da879a59712981ef5ad2a0ac1379f7a/bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl
+        url: 
+          https://files.pythonhosted.org/packages/d4/8d/5e43d9584b3b3591a6f9b68f755a4da879a59712981ef5ad2a0ac1379f7a/bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl
         sha256: 611f0a17aa4a25a69362dcc299fda5c8a3d4f160e2abb3831041feb77393a14a
 
   - name: python3-pycparser
@@ -70,7 +71,8 @@ modules:
         pycparser
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/b6/ae/315bbeee126a769cbde43cf4908acb4b40408d8bf8bbf334dd7368d8dadf/pycparser-3.12-py3-none-any.whl
+        url: 
+          https://files.pythonhosted.org/packages/b6/ae/315bbeee126a769cbde43cf4908acb4b40408d8bf8bbf334dd7368d8dadf/pycparser-3.12-py3-none-any.whl
         sha256: a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e
         x-checker-data:
           type: pypi
@@ -84,7 +86,8 @@ modules:
         cffi
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/98/df/0a1755e750013a2081e863e7cd37e0cdd02664372c754e5560099eb7aa44/cffi-2.0.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+        url: 
+          https://files.pythonhosted.org/packages/98/df/0a1755e750013a2081e863e7cd37e0cdd02664372c754e5560099eb7aa44/cffi-2.0.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
         sha256: c8d3b5532fc71b7a77c09192b4a5a200ea992702734a2e9279a37f2478236f26
 
   - name: python3-cryptography
@@ -96,7 +99,8 @@ modules:
         cryptography
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/da/3a/f05e32c99d440c9bb891ea0e36c9091891e36be5a9a87ab2ee6ea20729f6/cryptography-50.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
+        url: 
+          https://files.pythonhosted.org/packages/da/3a/f05e32c99d440c9bb891ea0e36c9091891e36be5a9a87ab2ee6ea20729f6/cryptography-50.0.0-cp311-abi3-manylinux_2_34_x86_64.whl
         sha256: 82148ec5bddac30b51a5b3c1945075f896fa022cb93f8e4a01e9f6ee95292c5f
 
   - python3-requirements_filtered.yaml
@@ -111,13 +115,15 @@ modules:
       - cat usr/pgadmin4/web/config_distro.py config_distro.py > ${FLATPAK_DEST}/pgAdmin4/web/config_distro.py
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.18-1.trixie_amd64.deb
+        url: 
+          https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_9.19-1.trixie_amd64.deb
         dest-filename: pgadmin-server.deb
-        sha256: c2abb7e010041a82bcdf77a4314166c573d511f4865b388f6d7d78a9ab3937cf
+        sha256: 31bb45844e179ca8979b14fccf49d59c17b7febd40061c47175443a1d35f8186
         x-checker-data:
           type: anitya
           project-id: 6603
-          url-template: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_${version}-1.trixie_amd64.deb
+          url-template: 
+            https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-server_${version}-1.trixie_amd64.deb
       - type: file
         path: config_distro.py
 
@@ -135,13 +141,15 @@ modules:
       - install -Dm644 org.pgadmin.pgadmin4.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pgadmin.pgadmin4.metainfo.xml
     sources:
       - type: file
-        url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.18-1.trixie_amd64.deb
+        url: 
+          https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_9.19-1.trixie_amd64.deb
         dest-filename: pgadmin-desktop.deb
-        sha256: b3f928d8a3ed0d12a442886e3679889baf4c5cd1e973358c99c90515d288814f
+        sha256: d7d55841743067bc6a97f84ce622cb1f236cd35d7a3f4954bdf18b1763b0d46f
         x-checker-data:
           type: anitya
           project-id: 6603
-          url-template: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_${version}-1.trixie_amd64.deb
+          url-template: 
+            https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/trixie/dists/pgadmin4/main/binary-amd64/pgadmin4-desktop_${version}-1.trixie_amd64.deb
 
       - type: script
         commands:
